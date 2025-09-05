@@ -1,0 +1,73 @@
+.full-screen-iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.loading-bg {
+  background-color: #010304;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  zoom: 0.67;
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+  .loading-ball {
+    margin-left: -6px;
+    margin-top: -6px;
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnimation 0s ease forwards;
+}
+.fadeOut {
+  animation: fadeOutAnimation 1s ease forwards;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* 动画起始状态为透明 */
+  }
+  to {
+    opacity: 1; /* 动画结束状态为完全不透明 */
+  }
+}
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.page-fadeIn {
+  animation: fadePageInAnimation 0.5s ease forwards;
+}
+@keyframes fadePageInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page-fadeOut {
+  animation: fadePageOutAnimation 0.5s ease forwards;
+}
+@keyframes fadePageOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

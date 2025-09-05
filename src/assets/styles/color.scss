@@ -1,0 +1,55 @@
+@use "./mixin" as *;
+$lightcolors: (
+  // PRIMARY
+  "primaryGradient": lineargradient(135deg, #ff6868, #ec1d2a),
+  "primary100": #ffeeef,
+  "primary200": #ffd5d7,
+  "primary400": #eb4945,
+  "primary500": #e3051c,
+
+  // ORANGE
+  "orange100": #fff5e0,
+  "orange200": #ffd5d7,
+
+  // YELLOW
+  "remarksYellow01": #ffda79,
+  "remarksYellow02": #ffbb64,
+
+  // GREEN
+  "statusGreen01": #f4fbe9,
+  "statusGreen02": #66b94d,
+  "remarksGreen01": #c5e898,
+  "remarksGreen02": #85bf69,
+  "remarksGreen03": #84b27a,
+  "remarksGreen04": #65c179,
+  "remarksGreen05": #68b984,
+  "remarksGreen06": #56ab96,
+
+  // BLUE
+  "remarksBlue01": #415f9d,
+  "remarksBlue02": #3c79f5,
+  "remarksBlue03": #438fe8,
+  "remarksBlue04": #6cc3da,
+
+  // GREY
+  "gray100": #f8f8f8,
+  "gray200": #f1f1f1,
+  "gray300": #dddddd,
+  "gray400": #d9d9d9,
+  "gray500": #a8a8a8,
+  "gray600": #595b5d,
+  "gray700": #353535,
+  "gray800": #1d1d1b,
+
+  // BLACK & WHITE
+  "black": #000,
+  "white": #fff,
+
+  // UTILL
+  "validation": #de3e47,
+  "success": #7ab974,
+  "focus": #ff97aa
+);
+:root {
+  @include setGlobalColors($lightcolors);
+}

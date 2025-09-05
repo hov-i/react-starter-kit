@@ -1,0 +1,53 @@
+// 모바일: 최소 "모바일" 사이즈부터 ~ 최대 "모바일에서 태블릿" 사이즈까지
+// 335px ~ 534px
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+
+  @media (max-height: 430px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// 태블릿 : 최소'태블릿'사이즈부터 ~ 최대 '테블릿'사이즈까지
+// 768px ~ 1024px
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-tabletToLaptop - 1px}) {
+    @content;
+  }
+}
+// '태블릿에서 노트북'사이즈까지
+@mixin tabletToLaptop {
+  @media (min-width: #{$breakpoint-tabletToLaptop}) and (max-width: #{$breakpoint-laptop - 1px}) {
+    @content;
+  }
+}
+// 노트북 : 최소 '노트북'사이즈부터 ~ 최대 '노트북에서 데스크탑'사이즈까지
+// 1280px ~ 1799px
+@mixin laptop {
+  @media (min-width: #{$breakpoint-laptop}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+// 데스크탑 : 최소 '데스크탑'사이즈
+// 1800px ~
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+// '작은 모바일' 사이즈
+@mixin minMobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-minMobile - 1px}) {
+    @content;
+  }
+}
+
+// 색상 변수 선언
+@mixin setGlobalColors($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{$value};
+  }
+}

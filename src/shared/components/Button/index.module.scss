@@ -1,0 +1,89 @@
+.basic-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  gap: 14px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  cursor: pointer;
+
+  // background-color: $color-white-700;
+  // color: $color-white-000;
+  &.gray {
+    background-color: #eaeaea;
+    color: #646464;
+    &:hover {
+      background-color: var(--gray400);
+    }
+    &:disabled {
+      color: #b2b2b2;
+    }
+  }
+
+  &.red {
+    background-color: var(--primary500);
+    color: var(--white);
+    &:hover {
+      background-color: #ca0216;
+    }
+    &:disabled {
+      background-color: #eaeaea;
+      color: #b2b2b2;
+    }
+  }
+
+  &.line {
+    border: 1px solid var(--primary500);
+    background-color: var(--white);
+    color: var(--primary500);
+    &:hover {
+      background-color: var(--primary500);
+      color: var(--white);
+    }
+    &:disabled {
+      background-color: var(--white);
+      border: 1px solid #f7d0d4;
+    }
+  }
+
+  &.sm {
+    padding: 8px 10px;
+    height: 32px;
+    font-size: 14px;
+  }
+  &.md {
+    padding: 8px 16px;
+    height: 40px;
+    font-size: 14px;
+  }
+  &.md-compact {
+    padding: 8px 16px;
+    height: 36px;
+    font-size: 14px;
+  }
+  &.lg {
+    padding: 8px 16px;
+    height: 48px;
+    font-size: 17px;
+  }
+  &.lg-compact {
+    padding: 8px 16px;
+    height: 44px;
+    font-size: 17px;
+  }
+  &.full {
+    width: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
